@@ -11,7 +11,7 @@ type GameModalProps = {
 function statusLabel(game: Game) {
   if (game.status === "playing") return "Jogando";
   if (game.status === "online") return "Online";
-  return "Já joguei";
+  return "Jogados";
 }
 
 export function GameModal({ game, onClose }: GameModalProps) {
@@ -29,7 +29,7 @@ export function GameModal({ game, onClose }: GameModalProps) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-void/80 p-0 backdrop-blur-sm sm:items-center sm:p-6"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-void/80 p-0 sm:items-center sm:p-6"
       onClick={onClose}
       role="presentation"
     >

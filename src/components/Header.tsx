@@ -6,7 +6,7 @@ const links = [
   { href: "#online", id: "online", label: "Online" },
   { href: "#jogando", id: "jogando", label: "Jogando" },
   { href: "#favoritos", id: "favoritos", label: "Favoritos" },
-  { href: "#jogados", id: "jogados", label: "Já joguei" },
+  { href: "#jogados", id: "jogados", label: "Jogados" },
   { href: "#top10", id: "top10", label: "Top 10" },
 ] as const;
 
@@ -17,10 +17,10 @@ export function Header() {
   const active = useActiveSection(ids);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-gold/25 bg-ink/80 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-gold/25 bg-ink">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 md:px-8">
         <a href="#topo" className="flex items-center gap-2.5 text-gold">
-          <ShurikenIcon className="animate-flicker h-6 w-6" />
+          <ShurikenIcon className="h-6 w-6" />
           <span className="font-display text-lg font-semibold tracking-[0.24em]">
             MEMORIAL
           </span>

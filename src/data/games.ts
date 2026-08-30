@@ -14,7 +14,7 @@ export const games: Game[] = [
     hours: 8,
     rating: 10,
     blurb:
-      "A primeira fase ainda é o padrão. Floresta densa, tronco, capim e o céu ciano no vão das folhas — Joe Musashi no timing certo.",
+      "O ninja Joe Musashi volta quando a organização Neo Zeed ressurge e ameaça o Japão. Ele atravessa florestas, fortalezas e bases inimigas para libertar reféns e destruir o clã de uma vez.",
   },
   {
     id: "golden-axe-3",
@@ -28,7 +28,7 @@ export const games: Game[] = [
     hours: 6,
     rating: 10,
     blurb:
-      "O favorito da série. Cooperativo bruto, magia que explode a tela e aquele ritmo de tavern-brawler que o Mega Drive fazia melhor que ninguém.",
+      "O feiticeiro Damud Hellbringer rouba o Machado Dourado e lança uma maldição sobre a terra. Um grupo de guerreiros parte para recuperar a arma e derrotá-lo.",
   },
   {
     id: "witcher-3",
@@ -42,7 +42,7 @@ export const games: Game[] = [
     hours: 186,
     rating: 10,
     blurb:
-      "O continente inteiro cabe numa escolha. Geralt, as escolas, os contratos — e a sensação de que cada vila tem uma história que vale a pena ouvir.",
+      "O bruxo Geralt de Rívia procura Ciri, sua filha adotiva, enquanto a Caçada Selvagem a persegue pelas Terras do Norte. No caminho, ele cumpre contratos de monstros e se envolve nas guerras entre reinos.",
   },
   {
     id: "dark-souls",
@@ -56,7 +56,7 @@ export const games: Game[] = [
     hours: 94,
     rating: 10,
     blurb:
-      "Lordran ensina na porrada. Fogueira, atalho, o peso da armadura e aquele silêncio depois do chefe que ninguém explica direito.",
+      "Em Lordran, o Morto-Vivo Escolhido precisa tocar os Sinos do Despertar, enfrentar os Lordes e decidir se reacende a Primeira Chama ou deixa o mundo sucumbir à escuridão.",
   },
   {
     id: "dark-souls-2",
@@ -66,11 +66,10 @@ export const games: Game[] = [
     genre: "Soulslike",
     platform: "PC",
     status: "played",
-    favorite: true,
     hours: 78,
     rating: 9,
     blurb:
-      "Drangleic é estranho, cruel e teimoso. Adaptar o jeito de jogar faz parte do encanto — e o Scholar ainda guarda mistério.",
+      "O Portador da Maldição chega a Drangleic em busca de uma cura para a morte-viva. Para sentar no Trono do Desejo, precisa reunir grandes almas e sobreviver a um reino em ruínas.",
   },
   {
     id: "dark-souls-3",
@@ -84,7 +83,7 @@ export const games: Game[] = [
     hours: 112,
     rating: 10,
     blurb:
-      "O fogo no fim do ciclo. Ritmo preciso, chefes que viram ritual, e Lothric como um epitáfio dourado da trilogia.",
+      "O Mundo Sem Cinzas está se desfazendo. O Não-Morto das Cinzas deve trazer os Lordes das Cinzas de volta aos tronos e decidir o destino da Primeira Chama.",
   },
   {
     id: "elden-ring",
@@ -98,7 +97,7 @@ export const games: Game[] = [
     rating: 10,
     note: "Não terminei",
     blurb:
-      "As Terras Intermédias ainda não acabaram. Sempre tem uma árvore no horizonte e um chefe escondido atrás de uma névoa.",
+      "Nas Terras Intermédias, um Maculado desperta após o Estilhaçamento. Ele busca os fragmentos do Elden Ring para se tornar o Senhor Prístino e restaurar — ou reescrever — a Ordem Dourada.",
   },
   {
     id: "bg3",
@@ -112,7 +111,7 @@ export const games: Game[] = [
     rating: 9.5,
     note: "Não terminei",
     blurb:
-      "Uma campanha que respeita o caos. Cada diálogo é uma bifurcação e o grupo virou gente de verdade. Ato final ainda espera.",
+      "Um grupo de sobreviventes é infectado por um girino de illithid e precisa impedir a transformação. Em Faerûn, eles desvendam o culto do Absoluto e descobrem que o parasita também pode ser uma arma.",
   },
   {
     id: "shinobi-aov",
@@ -125,7 +124,7 @@ export const games: Game[] = [
     hours: 12,
     rating: 9,
     blurb:
-      "O clã de volta em traço de Lizardcube. Combo, kunai e um visual que conversa direto com o Mega Drive sem parecer pastiche.",
+      "Joe Musashi retorna quando o clã Oboro é massacrado. Ele persegue os responsáveis numa jornada de vingança que mistura ninjutsu clássico com um Japão contemporâneo estilizado.",
   },
   {
     id: "golden-axe",
@@ -138,7 +137,7 @@ export const games: Game[] = [
     hours: 4,
     rating: 8.5,
     blurb:
-      "O original. Machadada, magia e o som de Death Adder. Curto, direto, e ainda ensina o idioma da série.",
+      "Death Adder sequestra o rei e a princesa e toma o Machado Dourado. Ax Battler, Tyris Flare e Gilius Thunderhead atravessam o continente para resgatá-los.",
   },
   {
     id: "golden-axe-2",
@@ -151,7 +150,7 @@ export const games: Game[] = [
     hours: 4,
     rating: 8,
     blurb:
-      "O irmão do meio. Mais polido que o um, menos selvagem que o três — mas a taverna continua valendo o coop.",
+      "O feiticeiro Dark Guld rouba o Machado Dourado e ameaça o reino. Os guerreiros da primeira aventura partem outra vez para recuperar a arma e derrotá-lo.",
   },
   {
     id: "swat",
@@ -166,7 +165,7 @@ export const games: Game[] = [
     rating: 9.5,
     note: "O mais difícil",
     blurb:
-      "O jogo mais difícil que eu joguei. Cyber-cop no Mega Drive: rua, jetpack, armadura ESWAT e uma cidade que não perdoa o timing.",
+      "O policial Duke Oda enfrenta uma onda de crimes em Cypress City. Depois de provar seu valor nas ruas, ele entra para a unidade ESWAT, ganha uma armadura cibernética e tenta retomar a cidade.",
   },
   {
     id: "katana-zero",
@@ -179,7 +178,7 @@ export const games: Game[] = [
     hours: 10,
     rating: 9.5,
     blurb:
-      "Neon, fita cassete e um corte que rebobina o tempo. Cada quarto é um puzzle de sangue com trilha que não larga.",
+      "Um assassino viciado em Chronos, uma droga que distorce o tempo, cumpre contratos para uma agência governamental. Cada missão revela um pouco mais de uma conspiração e da própria identidade dele.",
   },
   {
     id: "messenger",
@@ -192,7 +191,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 9,
     blurb:
-      "Ninja de 8 bits que vira 16 no meio do caminho. Humor afiado, mapa esperto e um spoiler que vale a viagem no tempo.",
+      "Um ninja novato precisa levar um pergaminho sagrado por um reino tomado por demônios. No caminho, ele viaja entre o passado de 8 bits e o futuro de 16 bits para impedir o retorno do Senhor do Mal.",
   },
   {
     id: "dantes-inferno",
@@ -206,7 +205,7 @@ export const games: Game[] = [
     hours: 12,
     rating: 8,
     blurb:
-      "O Inferno como hack-and-slash. Excessivo, teatral, e com um Dante que resolve teologia na foice.",
+      "O cruzado Dante desce pelos nove círculos do Inferno para resgatar a alma de Beatrice das garras de Lúcifer. A jornada adapta a Divina Comédia a um acerto de contas pessoal.",
   },
   {
     id: "bayonetta",
@@ -219,7 +218,7 @@ export const games: Game[] = [
     hours: 18,
     rating: 9.5,
     blurb:
-      "Witch-time, salto alto e combo que vira coreografia. O action game como espetáculo.",
+      "A bruxa Bayonetta desperta sem memórias e caça anjos para recuperar o passado. Em conflito entre o clã das Umbra e o Paraíso, ela descobre quem é e o que fez com a própria alma.",
   },
   {
     id: "diablo-3",
@@ -233,7 +232,7 @@ export const games: Game[] = [
     hours: 90,
     rating: 8.5,
     blurb:
-      "Loot que canta, rifts que não acabam. Menos sombrio que o dois, mais viciante do que admite.",
+      "Uma estrela cadente atinge a catedral de Tristram e liberta forças infernais. Um nephalem persegue o Senhor do Terror, que tenta renascer usando Leah, sobrinha de Deckard Cain.",
   },
   {
     id: "cuphead",
@@ -246,7 +245,7 @@ export const games: Game[] = [
     hours: 20,
     rating: 9,
     blurb:
-      "Cartoon dos anos 30 com hitbox de aço. Cada chefe é um exame, cada parry uma pequena vitória.",
+      "Cuphead e Mugman perdem uma aposta para o Diabo e precisam cobrar os contratos de almas dos devedores do Inferno. Só assim evitam entregar as próprias almas.",
   },
   {
     id: "dave-diver",
@@ -259,7 +258,7 @@ export const games: Game[] = [
     hours: 32,
     rating: 9,
     blurb:
-      "Mergulho de dia, sushi de noite. Loop perfeito — e o oceano sempre guarda mais uma coisa estranha.",
+      "Dave mergulha de dia para pescar no Mar Azul e à noite ajuda a tocar um restaurante de sushi. No fundo do oceano, uma civilização secreta e criaturas gigantes mudam o que parecia um trabalho simples.",
   },
   {
     id: "darksiders",
@@ -272,7 +271,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 8,
     blurb:
-      "Guerra a cavalo no fim do mundo. Zelda com machado, visual de HQ e um apocalipse que pede continuação.",
+      "Guerra, um dos Quatro Cavaleiros, é acusado de ter iniciado o Apocalipse cedo demais. Sem poderes, ele precisa provar sua inocência e descobrir quem quebrou o equilíbrio entre Inferno e Paraíso.",
   },
   {
     id: "gmod",
@@ -285,7 +284,7 @@ export const games: Game[] = [
     hours: 200,
     rating: 9,
     blurb:
-      "A caixa de areia infinita. Prop hunt, builds tortos e a certeza de que alguém vai spawnar um ragdoll no teto.",
+      "Não há campanha: é um sandbox no motor Source. O jogador cria objetos, experimenta física e joga modos feitos pela comunidade, do Prop Hunt ao Murder.",
   },
   {
     id: "inscryption",
@@ -298,7 +297,7 @@ export const games: Game[] = [
     hours: 14,
     rating: 9.5,
     blurb:
-      "Cartas, cabana e um spoiler que não se conta. O deckbuilder que vira outra coisa no meio da noite.",
+      "Um narrador convida o jogador para um jogo de cartas numa cabana isolada. O que começa como um duelo de baralho vira um mistério sobre o próprio jogo e quem o criou.",
   },
   {
     id: "half-life",
@@ -311,7 +310,7 @@ export const games: Game[] = [
     hours: 12,
     rating: 10,
     blurb:
-      "Black Mesa sem cutscene barata. A câmera nunca sai da mão — e o silêncio do corredor ainda funciona.",
+      "O cientista Gordon Freeman provoca uma cascata de ressonância no laboratório de Black Mesa. Aliens invadem as instalações, e ele precisa escapar sem nunca sair da primeira pessoa.",
   },
   {
     id: "half-life-2",
@@ -324,7 +323,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 10,
     blurb:
-      "City 17, gravidade e a crowbar. O FPS como cinema em primeira pessoa — ainda o recorde a bater.",
+      "Anos depois, Freeman é despertado em City 17, ocupada pelo Império Combine. Com a gravidade como arma, ele se junta à resistência para libertar a Terra.",
   },
   {
     id: "sekiro",
@@ -333,11 +332,12 @@ export const games: Game[] = [
     steamId: 814380,
     genre: "Ação",
     platform: "PC",
+    favorite: true,
     status: "played",
     hours: 52,
     rating: 10,
     blurb:
-      "Hesitação é derrota. Quando o ritmo encaixa, cada duelo vira uma conversa de lâminas.",
+      "O shinobi Wolf perde o braço e o jovem senhor Kuro para um usurpador em Ashina. Ele jura recuperar Kuro e cortar os laços da imortalidade que corroem o clã.",
   },
   {
     id: "cyberpunk",
@@ -351,7 +351,7 @@ export const games: Game[] = [
     rating: 9,
     note: "Não terminei",
     blurb:
-      "Night City brilha e machuca. Ainda no meio da rua — o crédito final espera.",
+      "V, um mercenário de Night City, acaba com um biochip que contém a consciência da lenda rockeira Johnny Silverhand. Os dois compartilham o mesmo corpo enquanto tentam remover o Relic e sobreviver à cidade.",
   },
   {
     id: "celeste",
@@ -364,7 +364,7 @@ export const games: Game[] = [
     hours: 19,
     rating: 9,
     blurb:
-      "A montanha é o pico e o medo. Preciso, generoso, e honestamente difícil no melhor sentido.",
+      "Madeline tenta escalar a Montanha Celeste para enfrentar a ansiedade e o descontrole. No caminho, ela encontra uma versão sombria de si mesma e precisa aprender a conviver com ela.",
   },
   {
     id: "portal-2",
@@ -377,7 +377,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 10,
     blurb:
-      "Ciência, bolo e timing cômico. Ainda o padrão de ouro de puzzle com personalidade.",
+      "Chell acorda em Aperture Science e é guiada por Wheatley, uma IA desastrada. Juntos eles reativam GLaDOS sem querer e precisam escapar de um laboratório que desaba.",
   },
   {
     id: "stardew",
@@ -390,20 +390,20 @@ export const games: Game[] = [
     hours: 120,
     rating: 9,
     blurb:
-      "A fazenda como refúgio. Pescar até de madrugada e fingir que é só mais uma estação.",
+      "Depois de herdar a fazenda abandonada do avô, o jogador deixa o emprego corporativo e tenta reconstruir a vida em Pelican Town: plantar, pescar, minerar e se aproximar dos moradores.",
   },
   {
     id: "valorant",
     title: "Valorant",
     year: 2020,
     coverUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/f/fc/Valorant_logo_-_pink_color_version.svg",
+      "https://geekinout.pt/storage/1184/01J49XRHZ2WH99F7PYTMHZJHWA.jpg",
     genre: "Tático",
     platform: "PC",
     status: "online",
     rating: 8,
     blurb:
-      "Tiro no pixel e ultimate no clutch. Ranked que come a noite — e um agente sempre parece injusto até você pegar.",
+      "Agentes com poderes de radianita enfrentam uma organização rival que usa a substância como arma. Cada partida é um confronto tático de dois times de cinco, com bombas, habilidades e economia de rodada.",
   },
   {
     id: "lol",
@@ -416,7 +416,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8,
     blurb:
-      "A rift que não larga. Uma draft, um tilt, um pentakill — e a fila de novo.",
+      "Em Runeterra, dois times de cinco campeões se enfrentam na Fenda do Invocador. O objetivo é destruir o Nexus inimigo controlando rotas, objetivos e o mapa.",
   },
   {
     id: "dbd",
@@ -428,7 +428,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8,
     blurb:
-      "Um killer, quatro sobreviventes, geradores que nunca acabam. Terror assimétrico com main que vira identidade.",
+      "A Entidade arrasta assassinos e sobreviventes para um reino sem fim. Quatro pessoas tentam consertar geradores e escapar; um killer tenta sacrificar todos no gancho.",
   },
   {
     id: "deadlock",
@@ -440,7 +440,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8.5,
     blurb:
-      "A Valve misturando MOBA e tiro. Ainda em ebulição — e já vicia no roteamento da lane.",
+      "Heróis sobrenaturais disputam o controle de uma cidade dividida em rotas. Dois times avançam, destroem estruturas e tentam invadir a base adversária.",
   },
   {
     id: "cs",
@@ -452,7 +452,7 @@ export const games: Game[] = [
     status: "online",
     rating: 9,
     blurb:
-      "A pistola eco, o clutch de 1v3, o spray que só você acredita. Dust, Mirage, e o tick da cabeça.",
+      "Terroristas e contra-terroristas se enfrentam em mapas clássicos: plantar ou desarmar a bomba, gerir a economia da rodada e ganhar o clutch na precisão.",
   },
   {
     id: "sea-of-thieves",
@@ -464,7 +464,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8.5,
     blurb:
-      "Mar aberto, tripulação duvidosa e um galeão no horizonte. O saque é o pretexto — a sessão é a história.",
+      "Tripulações de piratas navegam um mar compartilhado em busca de tesouros, fortes e lendas. Outros jogadores podem aliar-se ou saquear o mesmo carregamento.",
   },
   {
     id: "rocket-league",
@@ -476,7 +476,7 @@ export const games: Game[] = [
     status: "online",
     rating: 9,
     blurb:
-      "Futebol de foguete. Um kickoff, um air dribble, e a certeza de que o time ia defender.",
+      "Times de carros movidos a foguete jogam uma espécie de futebol. O gol vale, o boost decide e as partidas vão do casual ao competitivo ranqueado.",
   },
   {
     id: "overwatch",
@@ -489,7 +489,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8,
     blurb:
-      "Team fight em 30 segundos. Um main que define a noite e um counter que aparece na hora errada.",
+      "Heróis de um futuro após a Crise Ômnica formam times para missões de ataque, defesa e controle. Cada personagem ocupa um papel — tanque, dano ou suporte — numa briga por objetivos.",
   },
   {
     id: "arena-breakout",
@@ -501,7 +501,7 @@ export const games: Game[] = [
     status: "online",
     rating: 8,
     blurb:
-      "Entra com o kit, sai com o medo. Extraction que cobra cada passo — e o extract nunca parece perto o bastante.",
+      "Operadores entram em mapas hostis para saquear equipamento e sair pelo ponto de extração. Morrer significa perder o que trouxe e o que encontrou.",
   },
   {
     id: "bo2",
@@ -513,7 +513,7 @@ export const games: Game[] = [
     status: "online",
     rating: 9,
     blurb:
-      "Nuketown, league play e o lobby que criou uma geração. O CoD que ainda volta na conversa.",
+      "Em 2025, David Mason caça o terrorista Raul Menendez; nos anos 80, o pai dele, Alex, vive a origem do conflito. As escolhas da campanha mudam o rumo da guerra.",
   },
   {
     id: "l4d",
@@ -525,7 +525,7 @@ export const games: Game[] = [
     status: "online",
     rating: 9,
     blurb:
-      "Quatro sobreviventes, um director doente. O grito do Hunter ainda acelera o pulso.",
+      "Quatro sobreviventes atravessam cidades tomadas por infectados. Um diretor de IA regula o ritmo das hordas enquanto o grupo tenta chegar ao resgate.",
   },
   {
     id: "l4d2",
@@ -537,7 +537,7 @@ export const games: Game[] = [
     status: "online",
     rating: 9.5,
     blurb:
-      "Versus, campanhas e a Crowbar no horde. O coop zumbi que o tempo não envelheceu.",
+      "Um novo grupo foge pelo sul dos Estados Unidos durante o mesmo surto. Há mais infectados especiais e campanhas — e o versus coloca jogadores no papel dos zumbis.",
   },
   {
     id: "rust",
@@ -549,21 +549,21 @@ export const games: Game[] = [
     status: "online",
     rating: 8.5,
     blurb:
-      "Naked na praia, AK no wipe. Traição, base e a voz no chat que nunca deveria ter sido amiga.",
+      "Você acorda nu numa ilha persistente. Coleta recursos, constrói uma base e tenta não ser saqueado — ou saqueia os outros — até o wipe recomeçar o servidor.",
   },
   {
     id: "minecraft",
     title: "Minecraft",
     year: 2011,
     coverUrl:
-      "https://upload.wikimedia.org/wikipedia/en/b/b6/Minecraft_2024_cover_art.png",
+      "https://store-images.s-microsoft.com/image/apps.17382.13510798885735219.9735d495-578c-4a4c-b892-3eb3a780b3a0.d3792486-cf98-40c0-a2c1-d6443f0e2b70",
     genre: "Sandbox",
     platform: "PC",
     status: "played",
     hours: 400,
     rating: 10,
     blurb:
-      "Cubo, noite e o som do creeper. O sandbox que virou idioma — e ainda cabe mais uma base.",
+      "Num mundo de blocos gerado ao acaso, o jogador sobrevive à noite, constrói o que quiser e, se chegar ao End, enfrenta o Ender Dragon.",
   },
   {
     id: "terraria",
@@ -576,7 +576,7 @@ export const games: Game[] = [
     hours: 80,
     rating: 9.5,
     blurb:
-      "Cavar até o inferno e voltar com uma arma ridícula. 2D que envergonha mundo aberto.",
+      "Depois de cair num mundo 2D, o jogador cava, fabrica equipamentos e enfrenta chefes até a Lua. A corrupção, a selva e o submundo mudam conforme o progresso.",
   },
   {
     id: "overcooked",
@@ -589,7 +589,7 @@ export const games: Game[] = [
     hours: 14,
     rating: 8.5,
     blurb:
-      "Amizade no fogo. Um prato, quatro pessoas e a certeza de que alguém esqueceu o arroz.",
+      "Uma equipe de cozinheiros precisa montar pratos em cozinhas que se separam, pegam fogo ou se movem. O tempo é curto e o trabalho em equipe é o próprio desafio.",
   },
   {
     id: "green-hell",
@@ -602,33 +602,33 @@ export const games: Game[] = [
     hours: 22,
     rating: 8,
     blurb:
-      "Amazônia que cobra hidratação, verme e sanidade. Sobreviver aqui é burocracia selvagem.",
+      "O antropólogo Jake Higgins acorda sozinho na Amazônia. Ele precisa sobreviver à selva — fome, infecção, animais e a própria mente — enquanto procura respostas sobre a mulher e a expedição.",
   },
   {
     id: "obscure",
     title: "Obscure",
     year: 2004,
-    steamId: 254460,
+    coverUrl: "https://m.media-amazon.com/images/M/MV5BYzYwYWViNGQtMjI0NS00MTVjLWFmNWEtYmI3N2NmODQyM2E1XkEyXkFqcGc@._V1_.jpg",
     genre: "Horror",
     platform: "PC",
     status: "played",
     hours: 8,
     rating: 8,
     blurb:
-      "Colégio à noite, flashlight e o survival horror que a geração PS2 não esquece.",
+      "Um grupo de estudantes fica preso no colégio Leafmore à noite. Eles descobrem experimentos com a planta Mortifilia, que transforma pessoas em monstros.",
   },
   {
     id: "obscure-2",
     title: "Obscure II",
     year: 2007,
-    steamId: 254480,
+    coverUrl: "https://howlongtobeat.com/games/6693_ObsCure_II.png",
     genre: "Horror",
     platform: "PC",
     status: "played",
     hours: 8,
     rating: 8,
     blurb:
-      "A sequência no campus. Flores, pesadelo e o coop que o primeiro ensinou.",
+      "Dois anos depois, os sobreviventes estão na universidade. A Mortifilia volta, agora ligada a um culto, e o grupo precisa impedir um novo surto.",
   },
   {
     id: "doom-64",
@@ -641,20 +641,20 @@ export const games: Game[] = [
     hours: 8,
     rating: 9,
     blurb:
-      "O Doom mais soturno. N64, névoa e uma trilha que parece o inferno esfriando.",
+      "O fuzileiro é enviado de volta a uma instalação em que demônios ainda restam. Uma entidade maior, a Mother Demon, tenta reabrir o portal para o Inferno.",
   },
   {
     id: "doom",
     title: "Doom",
     year: 1993,
-    steamId: 2280,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/5/57/Doom_cover_art.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 10,
     rating: 10,
     blurb:
-      "O original. Corredor, shotgun e o idioma que o FPS ainda fala.",
+      "Um fuzileiro espacial em Phobos enfrenta uma invasão demoníaca vinda do Inferno. Sozinho, ele atravessa bases da UAC para fechar o portal.",
   },
   {
     id: "doom-2",
@@ -667,7 +667,7 @@ export const games: Game[] = [
     hours: 10,
     rating: 10,
     blurb:
-      "Super Shotgun. Cidade, ícone e o mapa que virou religião.",
+      "Os demônios chegaram à Terra. O mesmo fuzileiro luta pelas cidades e pelo Inferno para impedir o Ícone do Pecado de consumir o planeta.",
   },
   {
     id: "doom-3",
@@ -680,7 +680,7 @@ export const games: Game[] = [
     hours: 14,
     rating: 8.5,
     blurb:
-      "Lanterna ou arma — nunca os dois. Mars vira survival horror com shotgun.",
+      "Numa instalação da UAC em Marte, um experimento abre um portal para o Inferno. O soldado fica no escuro, com pouca munição, tentando evacuar e fechar a brecha.",
   },
   {
     id: "doom-2016",
@@ -693,7 +693,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 9.5,
     blurb:
-      "Rip and tear. O reboot que devolveu velocidade, Glory Kill e uma guitarra no inferno.",
+      "O Doom Slayer acorda numa instalação da UAC tomada por demônios. Ele recusa o protocolo e parte para massacrar o Inferno em Marte.",
   },
   {
     id: "doom-eternal",
@@ -706,7 +706,7 @@ export const games: Game[] = [
     hours: 20,
     rating: 9.5,
     blurb:
-      "Arena como puzzle de munição. Mais rápido que o 2016 — e mais exigente.",
+      "A Terra já foi invadida. O Slayer caça os sacerdotes do Inferno e enfrenta o Khan Maykr, que usa a humanidade como combustível.",
   },
   {
     id: "alien-isolation",
@@ -719,7 +719,7 @@ export const games: Game[] = [
     hours: 18,
     rating: 9.5,
     blurb:
-      "Um xenomorfo, zero justiça. Esconder, ouvir e aceitar que ele sempre sabe.",
+      "Amanda Ripley chega à estação Sevastopol em busca de pistas da mãe, Ellen. A bordo, um xenomorfo caça os sobreviventes, e esconder-se é a única defesa.",
   },
   {
     id: "civ-6",
@@ -732,7 +732,7 @@ export const games: Game[] = [
     hours: 90,
     rating: 9,
     blurb:
-      "Mais um turno. Depois mais um. A história humana como desculpa para viciar.",
+      "O jogador lidera uma civilização da Idade da Pedra até a era espacial. Expande cidades, pesquisa tecnologias, negocia e pode vencer por ciência, cultura, diplomacia ou guerra.",
   },
   {
     id: "gta-vc",
@@ -745,7 +745,7 @@ export const games: Game[] = [
     hours: 24,
     rating: 9.5,
     blurb:
-      "Neon, rádio e o terno branco. Os anos 80 como playground.",
+      "Tommy Vercetti é traído num negócio em Vice City e preso. Ao sair, ele sobe no crime organizado dos anos 80 para tomar a cidade das mãos de Sonny Forelli.",
   },
   {
     id: "gta-sa",
@@ -758,7 +758,7 @@ export const games: Game[] = [
     hours: 40,
     rating: 10,
     blurb:
-      "Grove Street. Ginásio, jetpack e um estado inteiro dentro do PC.",
+      "Carl Johnson volta a Los Santos após o assassinato da mãe. Ele tenta reunir a Grove Street Families, sobreviver às gangues e desmontar a corrupção que destruiu o bairro.",
   },
   {
     id: "gta-4",
@@ -771,7 +771,7 @@ export const games: Game[] = [
     hours: 30,
     rating: 9,
     blurb:
-      "Liberty City cinza e pesada. Niko, o primo e a física que ainda age diferente.",
+      "O veterano Niko Bellic chega a Liberty City atrás do sonho americano prometido pelo primo Roman. O que encontra é trabalho sujo, vingança de guerra e uma cidade que cobra cada favor.",
   },
   {
     id: "gta-5",
@@ -784,7 +784,7 @@ export const games: Game[] = [
     hours: 80,
     rating: 9.5,
     blurb:
-      "Três protagonistas, um estado e o online que virou outro jogo.",
+      "Michael, um assaltante aposentado, Franklin, um jovem de rua, e Trevor, um psicopata do deserto, se unem para um último ciclo de golpes em Los Santos — enquanto o IAA e o FIB os usam.",
   },
   {
     id: "oblivion",
@@ -797,7 +797,7 @@ export const games: Game[] = [
     hours: 50,
     rating: 9,
     blurb:
-      "O quarto. Cyrodiil, portais e a face mais estranha da Bethesda — e ainda assim inesquecível.",
+      "O imperador é assassinado e portais para Oblivion se abrem em Cyrodiil. O prisioneiro que testemunhou a morte deve encontrar o herdeiro e fechar a Crise de Oblivion.",
   },
   {
     id: "skyrim",
@@ -810,7 +810,7 @@ export const games: Game[] = [
     hours: 160,
     rating: 9.5,
     blurb:
-      "O quinto. Mais um dragão, mais um lado. Skyrim que você 'termina' e abre de novo.",
+      "O dragão Alduin, Devorador do Mundo, retorna. O último Dragonborn desperta em Skyrim, aprende o Thu'um e precisa impedir o fim dos tempos — no meio de uma guerra civil.",
   },
   {
     id: "evil-within",
@@ -823,7 +823,7 @@ export const games: Game[] = [
     hours: 14,
     rating: 8.5,
     blurb:
-      "Mikami de volta ao horror. Munição curta, ângulo cruel e um hospital que não acaba.",
+      "O detetive Sebastian Castellanos investiga um massacre num hospício. Ele é puxado para um pesadelo criado por Ruvik dentro da máquina STEM, onde a mente vira o cenário.",
   },
   {
     id: "evil-within-2",
@@ -836,7 +836,7 @@ export const games: Game[] = [
     hours: 16,
     rating: 9,
     blurb:
-      "A cidade como playground do pesadelo. Mais livre que o um — e ainda sufoca.",
+      "Sebastian entra de novo no STEM, agora na cidade virtual de Union, para resgatar a filha Lily. Um novo administrador corrompeu o sistema e os moradores viraram monstros.",
   },
   {
     id: "watch-dogs",
@@ -849,7 +849,7 @@ export const games: Game[] = [
     hours: 22,
     rating: 8,
     blurb:
-      "Chicago no celular. Hack, perseguição e um Aiden que resolve tudo no perfil.",
+      "Aiden Pearce, um hacker, busca vingança pela morte da sobrinha em Chicago. Com acesso ao ctOS, ele controla câmeras, semáforos e a vida digital da cidade.",
   },
   {
     id: "watch-dogs-2",
@@ -862,72 +862,72 @@ export const games: Game[] = [
     hours: 24,
     rating: 8.5,
     blurb:
-      "São Francisco mais solta. Crew, drone e o hacker que finalmente ri.",
+      "Em São Francisco, o grupo DedSec recruta Marcus Holloway para expor a Blume e o ctOS 2.0. Os hacks viram ação pública contra vigilância e corporações.",
   },
   {
     id: "halo-ce",
     title: "Halo: Combat Evolved",
     year: 2001,
-    steamId: 976730,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/8/80/Halo_-_Combat_Evolved_%28XBox_version_-_box_art%29.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 12,
     rating: 10,
     blurb:
-      "O anel. Two-weapon, Warthog e o silêncio do Forerunner.",
+      "O Master Chief e a IA Cortana caem no anel Halo. Eles descobrem que a instalação é uma arma contra o Flood e precisam detoná-la antes que Covenant e parasitas escapem.",
   },
   {
     id: "halo-2",
     title: "Halo 2",
     year: 2004,
-    steamId: 976730,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/1/17/Halo_2_Cover_Art.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 12,
     rating: 10,
     blurb:
-      "Finish the fight. Dual wield, online e o cliffhanger que durou anos.",
+      "Enquanto o Chief defende a Terra, o Elite que falhou em Halo vira o Arbiter. Os dois lados de uma guerra civil no Covenant se cruzam rumo a um segundo anel.",
   },
   {
     id: "halo-3",
     title: "Halo 3",
     year: 2007,
-    steamId: 976730,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/8/86/Halo_3_final_boxshot.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 14,
     rating: 10,
     blurb:
-      "O fechamento. Forge, theater e a campanha que a geração inteira zerou junto.",
+      "O Chief volta à Terra e depois a um novo Halo para impedir o Profeta da Verdade de ativar o conjunto. A guerra contra o Covenant e o Flood chega ao fim.",
   },
   {
     id: "halo-4",
     title: "Halo 4",
     year: 2012,
-    steamId: 976730,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/9/92/Halo_4_box_artwork.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 10,
     rating: 8,
     blurb:
-      "Chief e Cortana de novo. Mais íntimo, mais 343 — e ainda é Halo.",
+      "À deriva, Chief e Cortana encontram Requiem e o Didata, um Forerunner que quer exterminar a humanidade. Cortana está em colapso, e a relação dos dois vira o centro da história.",
   },
   {
     id: "halo-reach",
     title: "Halo: Reach",
     year: 2010,
-    steamId: 976730,
+    coverUrl: "https://upload.wikimedia.org/wikipedia/pt/1/1a/Halo-_Reach_box_art.jpg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "FPS",
     platform: "PC",
     status: "played",
     hours: 14,
     rating: 9.5,
     blurb:
-      "O planeta que cai. Noble Six, armor ability e um final que não pede bis.",
+      "O planeta Reach, fortaleza da UNSC, é invadido pelo Covenant. O time Noble luta uma batalha perdida para evacuar dados — e o próprio Master Chief.",
   },
   {
     id: "sooth",
@@ -940,7 +940,7 @@ export const games: Game[] = [
     hours: 5,
     rating: 8,
     blurb:
-      "VHS, porão e o serial killer da Puppet Combo. Esconde, corre, não olha pra trás.",
+      "O jogador é sequestrado por um serial killer e preso numa casa isolada. Precisa explorar, fabricar itens e escapar sem ser pego — ou morto no porão.",
   },
   {
     id: "detroit",
@@ -953,7 +953,7 @@ export const games: Game[] = [
     hours: 12,
     rating: 8.5,
     blurb:
-      "Androide, escolha e um fluxograma que vira vício. Detroit como palco de 'e se'.",
+      "Em 2038, androides conscientes enfrentam uma sociedade que os trata como eletrodomésticos. As histórias de Kara, Connor e Markus se cruzam numa revolução que o jogador define.",
   },
   {
     id: "kf1",
@@ -966,7 +966,7 @@ export const games: Game[] = [
     hours: 30,
     rating: 8.5,
     blurb:
-      "Wave, perk e o Specimens no beco. Coop barato e viciante.",
+      "Mercenários são contratados pela Horzine para conter clones mutantes que escaparam. Em ondas, o time defende o mapa até a extração.",
   },
   {
     id: "kf2",
@@ -979,49 +979,49 @@ export const games: Game[] = [
     hours: 40,
     rating: 9,
     blurb:
-      "Gore, level e a Zed que sobe na parede. O horde shooter que cresceu certo.",
+      "A Horzine perdeu o controle de uma nova geração de Zeds. Esquadrões armados enfrentam hordas cada vez mais fortes enquanto sobem de nível e especializam perks.",
   },
   {
     id: "forza-h1",
     title: "Forza Horizon",
     year: 2012,
     coverUrl:
-      "https://upload.wikimedia.org/wikipedia/en/8/87/Forza_Horizon_cover_art.jpg",
+      "https://preview.redd.it/should-forza-horizon-1-get-remastered-v0-uamauwdirzee1.jpeg?auto=webp&s=de6ba1e4d02d13e7eb0e0776f46d91f9bdcd511c",
     genre: "Corrida",
     platform: "Xbox",
     status: "played",
     hours: 20,
     rating: 8.5,
     blurb:
-      "O primeiro festival. Colorado, rádio no capô e a série Horizon nascendo no asfalto.",
+      "Um festival de rua toma as estradas do Colorado. O jogador chega como novato e sobe no ranking correndo em asfalto, terra e montanha.",
   },
   {
     id: "forza-h2",
     title: "Forza Horizon 2",
     year: 2014,
     coverUrl:
-      "https://upload.wikimedia.org/wikipedia/en/4/41/Forza_Horizon_2_cover_art.jpg",
+      "https://upload.wikimedia.org/wikipedia/pt/f/fd/Capa_de_Forza_Horizon_2.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original",
     genre: "Corrida",
     platform: "Xbox",
     status: "played",
     hours: 22,
     rating: 8.5,
     blurb:
-      "Europa no crepúsculo. O dois afina o festival — costa, vinhedo e o som do motor à noite.",
+      "O festival cruza o sul da Europa, da França à Itália. O jogador compete de dia e de noite numa costa mediterrânea aberta.",
   },
   {
     id: "forza-h3",
     title: "Forza Horizon 3",
     year: 2016,
     coverUrl:
-      "https://upload.wikimedia.org/wikipedia/en/1/17/Forza_Horizon_3_cover_art.jpg",
+      "https://store-images.s-microsoft.com/image/apps.58425.13510798886196618.b6116342-bb1b-4855-8304-88c1cb3e6050.cd8962ae-980f-4868-a494-49fd3f2bf104",
     genre: "Corrida",
     platform: "PC",
     status: "played",
     hours: 28,
     rating: 9,
     blurb:
-      "Austrália aberta. Outback, praia e o Horizon que primeiro chegou de verdade no PC.",
+      "O Horizon desembarca na Austrália. O jogador assume o festival e o expande pelo outback, pelas praias e pelas cidades.",
   },
   {
     id: "forza-h4",
@@ -1034,7 +1034,7 @@ export const games: Game[] = [
     hours: 40,
     rating: 9.5,
     blurb:
-      "Grã-Bretanha em quatro estações. Neve, festival e o online que virou rotina.",
+      "Na Grã-Bretanha, as estações mudam o mapa inteiro. Neve, outono e verão alteram as rotas enquanto o festival segue online.",
   },
   {
     id: "forza-h5",
@@ -1047,7 +1047,7 @@ export const games: Game[] = [
     hours: 45,
     rating: 9.5,
     blurb:
-      "México em escala cinema. Deserto, selva e o festival no auge do Horizon.",
+      "O festival vai ao México: deserto, selva, vulcões e cidades coloniais. O jogador explora o maior mapa da série e sobe no Horizon Arcade.",
   },
 ];
 
@@ -1056,6 +1056,11 @@ export const top10: RankedGame[] = [
     gameId: "witcher-3",
     reason:
       "O RPG que fez o mundo aberto parecer vivo de verdade. Contratos, personagens e um tom que nunca escorrega no cínico barato.",
+  },
+  {
+    gameId: "dark-souls",
+    reason:
+      "O original ainda ensina o idioma. Nível, atalho, medo — a geometria da coragem.",
   },
   {
     gameId: "dark-souls-3",
@@ -1073,34 +1078,29 @@ export const top10: RankedGame[] = [
       "O melhor Golden Axe. Coop, magia e o beat 'em up que a série estava tentando ser desde o começo.",
   },
   {
-    gameId: "dark-souls",
+    gameId: "sekiro",
     reason:
-      "O original ainda ensina o idioma. Nível, atalho, medo — a geometria da coragem.",
+    "O irmão do meio, teimoso e insubstituível. Adaptar o corpo ao jogo é metade da graça.",
+  },
+  {
+    gameId: "elden-ring",
+    reason:
+    "A liberdade das Terras Intermédias — ainda em sessão, ainda escondendo coisa atrás da névoa.",
+  },
+  {
+    gameId: "swat",
+    reason:
+    "O mais difícil. Cyber-cop no Mega Drive: um erro de timing e a cidade te enterra.",
+  },
+  {
+    gameId: "diablo-3",
+    reason:
+    "City 17 ainda é o recorde. Gravidade, crowbar e um silêncio que o FPS moderno esqueceu.",
   },
   {
     gameId: "katana-zero",
     reason:
       "Estilo puro. Tempo, fita e um corte que cabe num quarto de hotel.",
-  },
-  {
-    gameId: "dark-souls-2",
-    reason:
-      "O irmão do meio, teimoso e insubstituível. Adaptar o corpo ao jogo é metade da graça.",
-  },
-  {
-    gameId: "elden-ring",
-    reason:
-      "A liberdade das Terras Intermédias — ainda em sessão, ainda escondendo coisa atrás da névoa.",
-  },
-  {
-    gameId: "swat",
-    reason:
-      "O mais difícil. Cyber-cop no Mega Drive: um erro de timing e a cidade te enterra.",
-  },
-  {
-    gameId: "half-life-2",
-    reason:
-      "City 17 ainda é o recorde. Gravidade, crowbar e um silêncio que o FPS moderno esqueceu.",
   },
 ];
 

@@ -36,6 +36,7 @@ export function CoverImage({
       alt={`Capa de ${title}`}
       className={`object-cover ${className ?? ""}`}
       loading={priority ? "eager" : "lazy"}
+      decoding="async"
       onError={() => setIndex((current) => current + 1)}
     />
   );

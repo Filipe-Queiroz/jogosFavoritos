@@ -19,13 +19,6 @@
   --color-blood: #b01058;
 }
 
-:root {
-  --mx: 50vw;
-  --my: 40vh;
-  --mnx: 0;
-  --mny: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -37,7 +30,6 @@ body {
   color: var(--color-bone);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
 ::selection {
@@ -50,143 +42,25 @@ body {
   outline-offset: 3px;
 }
 
-/* ---------- fundo cybercore ---------- */
-
 .cyber-stage {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
   background:
-    radial-gradient(120% 80% at 50% 110%, rgb(255 45 138 / 0.16), transparent 60%),
-    radial-gradient(90% 60% at 50% -10%, rgb(62 240 192 / 0.1), transparent 65%),
+    radial-gradient(80% 50% at 50% 0%, rgb(255 45 138 / 0.1), transparent 60%),
     var(--color-void);
 }
 
 .cyber-grid {
   position: absolute;
-  inset: -12% -12% -12% -12%;
+  inset: 0;
   background-image:
-    linear-gradient(rgb(62 240 192 / 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 45 138 / 0.09) 1px, transparent 1px);
+    linear-gradient(rgb(62 240 192 / 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 45 138 / 0.07) 1px, transparent 1px);
   background-size: 64px 64px;
-  animation: grid-up 9s linear infinite;
-  transform: translate3d(calc(var(--mnx) * -22px), calc(var(--mny) * -16px), 0);
-  -webkit-mask-image: radial-gradient(130% 90% at 50% 45%, black 30%, transparent 88%);
-  mask-image: radial-gradient(130% 90% at 50% 45%, black 30%, transparent 88%);
+  animation: grid-up 12s linear infinite;
 }
-
-.cyber-floor {
-  position: absolute;
-  inset-inline: -30%;
-  bottom: -14%;
-  height: 55%;
-  background-image:
-    linear-gradient(rgb(62 240 192 / 0.4) 2px, transparent 2px),
-    linear-gradient(90deg, rgb(62 240 192 / 0.22) 1px, transparent 1px);
-  background-size: 90px 90px;
-  transform: perspective(560px) rotateX(74deg);
-  transform-origin: center bottom;
-  -webkit-mask-image: linear-gradient(to top, black 6%, transparent 84%);
-  mask-image: linear-gradient(to top, black 6%, transparent 84%);
-  animation: floor-up 6s linear infinite;
-}
-
-.cyber-horizon {
-  position: absolute;
-  inset-inline: 0;
-  bottom: 30%;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-gold),
-    var(--color-ember),
-    transparent
-  );
-  opacity: 0.5;
-  filter: blur(0.5px);
-}
-
-.cursor-aura {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(
-    340px circle at var(--mx) var(--my),
-    rgb(255 45 138 / 0.14),
-    rgb(62 240 192 / 0.06) 42%,
-    transparent 70%
-  );
-}
-
-.neon-cursor-ring,
-.neon-cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-  pointer-events: none;
-  opacity: 0;
-  translate: -50% -50%;
-  will-change: transform;
-}
-
-.neon-cursor-ring.is-awake,
-.neon-cursor-dot.is-awake {
-  opacity: 1;
-}
-
-.neon-cursor-ring {
-  width: 34px;
-  height: 34px;
-  border: 1px solid color-mix(in srgb, var(--color-gold) 70%, transparent);
-  border-radius: 999px;
-  box-shadow:
-    0 0 14px rgb(62 240 192 / 0.5),
-    inset 0 0 12px rgb(62 240 192 / 0.25);
-  transition:
-    width 0.22s ease,
-    height 0.22s ease,
-    border-color 0.22s ease;
-}
-
-.neon-cursor-ring[data-hot="true"] {
-  width: 56px;
-  height: 56px;
-  border-color: color-mix(in srgb, var(--color-ember) 80%, transparent);
-  box-shadow:
-    0 0 22px rgb(255 45 138 / 0.55),
-    inset 0 0 16px rgb(255 45 138 / 0.25);
-}
-
-.neon-cursor-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 999px;
-  background: var(--color-ember);
-  box-shadow: 0 0 10px rgb(255 45 138 / 0.9);
-}
-
-.bg-scanlines::before {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  opacity: 0.08;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent 2px,
-    rgb(4 0 12 / 0.7) 2px,
-    rgb(4 0 12 / 0.7) 3px
-  );
-}
-
-/* ---------- elementos ---------- */
 
 .rule {
   height: 2px;
@@ -200,87 +74,27 @@ body {
 }
 
 .neon-frame {
-  border: 1px solid color-mix(in srgb, var(--color-gold) 45%, transparent);
-  box-shadow:
-    0 0 0 1px color-mix(in srgb, var(--color-ember) 25%, transparent),
-    0 0 48px -12px rgb(62 240 192 / 0.45),
-    inset 0 0 80px -40px rgb(255 45 138 / 0.2);
+  border: 1px solid color-mix(in srgb, var(--color-gold) 40%, transparent);
 }
 
 .tilt-card {
   transform: perspective(760px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition:
-    transform 0.18s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-  transform-style: preserve-3d;
-}
-
-.tilt-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  background: radial-gradient(
-    220px circle at var(--gx, 50%) var(--gy, 50%),
-    rgb(62 240 192 / 0.22),
-    transparent 62%
-  );
-}
-
-.tilt-card:hover::after {
-  opacity: 1;
+  transition: transform 0.18s ease, border-color 0.2s ease;
 }
 
 .tilt-card:hover {
-  box-shadow: 0 0 34px -10px rgb(255 45 138 / 0.55);
+  border-color: color-mix(in srgb, var(--color-ember) 55%, transparent);
 }
-
-.writing-vertical {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-}
-
-.glitch {
-  position: relative;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.glitch::before {
-  color: var(--color-ember);
-  animation: glitch-x 4.5s steps(2, end) infinite;
-  clip-path: inset(0 0 62% 0);
-}
-
-.glitch::after {
-  color: var(--color-gold);
-  animation: glitch-x 3.7s steps(2, end) infinite reverse;
-  clip-path: inset(58% 0 0 0);
-}
-
-/* ---------- reveal por categoria ---------- */
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(34px);
+  transform: translateY(20px);
 }
 
 [data-reveal="in"] {
   opacity: 1;
   transform: none;
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
 [data-reveal] .stagger > * {
@@ -288,8 +102,7 @@ body {
 }
 
 [data-reveal="in"] .stagger > * {
-  animation: card-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--i, 0) * 45ms)
-    both;
+  animation: card-in 0.4s ease calc(var(--i, 0) * 30ms) both;
 }
 
 [data-reveal] .sweep {
@@ -298,78 +111,31 @@ body {
 
 [data-reveal="in"] .sweep {
   clip-path: inset(0 0 0 0);
-  transition: clip-path 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s;
+  transition: clip-path 0.55s ease 0.05s;
 }
-
-/* ---------- keyframes ---------- */
 
 @keyframes grid-up {
   from {
-    background-position:
-      0 0,
-      0 0;
+    background-position: 0 0, 0 0;
   }
   to {
-    background-position:
-      0 -64px,
-      0 0;
+    background-position: 0 -64px, 0 0;
   }
 }
 
-@keyframes floor-up {
-  from {
-    background-position:
-      0 0,
-      0 0;
-  }
-  to {
-    background-position:
-      0 -90px,
-      0 0;
-  }
-}
-
-/* usa translate/scale individuais para nao sobrescrever o transform do tilt */
 @keyframes card-in {
   from {
     opacity: 0;
-    translate: 0 30px;
-    scale: 0.96;
-    filter: saturate(0.35) brightness(1.35);
+    translate: 0 16px;
   }
   to {
     opacity: 1;
     translate: 0 0;
-    scale: 1;
-    filter: none;
   }
 }
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes flicker {
-  0%,
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 8px rgb(62 240 192 / 0.8));
-  }
-  40% {
-    opacity: 0.7;
-    filter: drop-shadow(0 0 3px rgb(255 45 138 / 0.5));
-  }
-  70% {
-    opacity: 1;
-    filter: drop-shadow(0 0 14px rgb(62 240 192 / 0.95));
-  }
+.animate-ember {
+  animation: pulse-ember 2s ease-out infinite;
 }
 
 @keyframes pulse-ember {
@@ -382,65 +148,13 @@ body {
   }
 }
 
-@keyframes kenburns {
-  from {
-    transform: scale(1.04) translate3d(0, 0, 0);
-  }
-  to {
-    transform: scale(1.16) translate3d(0, -2.5%, 0);
-  }
-}
-
-@keyframes glitch-x {
-  0%,
-  86%,
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
-  88% {
-    transform: translate3d(-3px, 1px, 0);
-    opacity: 0.85;
-  }
-  92% {
-    transform: translate3d(4px, -2px, 0);
-    opacity: 0.7;
-  }
-  96% {
-    transform: translate3d(-2px, 2px, 0);
-    opacity: 0.5;
-  }
-}
-
-.animate-rise {
-  animation: rise 0.8s ease both;
-}
-
-.animate-flicker {
-  animation: flicker 2.4s ease-in-out infinite;
-}
-
-.animate-ember {
-  animation: pulse-ember 2s ease-out infinite;
-}
-
-.animate-kenburns {
-  animation: kenburns 28s ease-in-out infinite alternate;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .animate-rise,
-  .animate-flicker,
   .animate-ember,
-  .animate-kenburns,
-  .cyber-grid,
-  .cyber-floor,
-  .glitch::before,
-  .glitch::after {
+  .cyber-grid {
     animation: none;
   }
 
@@ -448,6 +162,7 @@ body {
   [data-reveal] .stagger > * {
     opacity: 1;
     transform: none;
+    animation: none;
   }
 
   [data-reveal] .sweep {

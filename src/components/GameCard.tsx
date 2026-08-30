@@ -5,7 +5,6 @@ import { CoverImage } from "./CoverImage";
 type GameCardProps = {
   game: Game;
   onSelect: (game: Game) => void;
-  featured?: boolean;
   index?: number;
 };
 
@@ -14,7 +13,7 @@ function stars(rating: number) {
   return "◆".repeat(filled) + "◇".repeat(5 - filled);
 }
 
-export function GameCard({ game, onSelect, featured = false, index = 0 }: GameCardProps) {
+export function GameCard({ game, onSelect, index = 0 }: GameCardProps) {
   const handleMove = (event: PointerEvent<HTMLButtonElement>) => {
     const node = event.currentTarget;
     const rect = node.getBoundingClientRect();
@@ -39,11 +38,7 @@ export function GameCard({ game, onSelect, featured = false, index = 0 }: GameCa
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
       style={{ "--i": index } as CSSProperties}
-      className={`tilt-card group relative flex flex-col overflow-hidden border text-left ${
-        featured
-          ? "border-gold/50 bg-bark/80 shadow-[0_0_40px_-14px_rgb(62_240_192/0.7)]"
-          : "border-white/10 bg-bark/70 hover:border-ember/50"
-      }`}
+      className="tilt-card group relative flex flex-col overflow-hidden border border-white/10 bg-bark/70 text-left hover:border-ember/50"
     >
       <div className="relative aspect-2/3 overflow-hidden">
         <CoverImage
@@ -51,7 +46,6 @@ export function GameCard({ game, onSelect, featured = false, index = 0 }: GameCa
           coverUrl={game.coverUrl}
           title={game.title}
           className="h-full w-full transition duration-500 group-hover:scale-105"
-          priority={featured}
         />
         <div className="absolute inset-0 bg-linear-to-t from-void via-void/15 to-transparent opacity-85" />
 

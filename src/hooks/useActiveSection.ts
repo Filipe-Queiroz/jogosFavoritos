@@ -11,7 +11,7 @@ export function useActiveSection(ids: readonly string[]) {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
         if (best) setActive(best.target.id);
       },
-      { rootMargin: "-40% 0px -45% 0px", threshold: [0, 0.2, 0.6, 1] },
+      { rootMargin: "-40% 0px -45% 0px", threshold: 0.2 },
     );
 
     for (const id of ids) {

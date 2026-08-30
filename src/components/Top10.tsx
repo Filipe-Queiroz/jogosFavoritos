@@ -25,7 +25,7 @@ export function Top10({ onSelect }: Top10Props) {
         <button
           type="button"
           onClick={() => onSelect(first.game)}
-          className="group relative overflow-hidden border border-ember/40 bg-bark text-left shadow-[0_0_60px_-16px_rgb(255_45_138/0.45)]"
+          className="group relative overflow-hidden border border-ember/40 bg-bark text-left"
         >
           <CoverImage
             steamId={first.game.steamId}
@@ -51,7 +51,7 @@ export function Top10({ onSelect }: Top10Props) {
               <button
                 type="button"
                 onClick={() => onSelect(item.game)}
-                className="flex w-full items-center gap-4 border border-white/10 bg-bark/60 p-2.5 text-left transition hover:translate-x-1 hover:border-gold/50 hover:bg-bark hover:shadow-[0_0_24px_-10px_rgb(62_240_192/0.8)]"
+                className="flex w-full items-center gap-4 border border-white/10 bg-bark/60 p-2.5 text-left transition hover:border-gold/50 hover:bg-bark"
               >
                 <span className="w-10 shrink-0 text-center font-display text-lg font-semibold text-gold/80">
                   {String(item.rank).padStart(2, "0")}

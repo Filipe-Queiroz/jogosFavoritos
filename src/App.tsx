@@ -5,7 +5,6 @@ import { GameCard } from "./components/GameCard";
 import { GameModal } from "./components/GameModal";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { NeonCursor } from "./components/NeonCursor";
 import { Section } from "./components/Section";
 import { Top10 } from "./components/Top10";
 import { favorites, online, played, playing } from "./data/games";
@@ -26,9 +25,8 @@ export default function App() {
   }, [query]);
 
   return (
-    <div className="bg-scanlines min-h-svh">
+    <div className="min-h-svh">
       <CyberBackground />
-      <NeonCursor />
       <Header />
       <main>
         <Hero />
@@ -47,7 +45,6 @@ export default function App() {
                   key={game.id}
                   game={game}
                   index={index}
-                  featured
                   onSelect={setSelected}
                 />
               ))}
@@ -68,7 +65,6 @@ export default function App() {
                 key={game.id}
                 game={game}
                 index={index}
-                featured
                 onSelect={setSelected}
               />
             ))}
@@ -88,7 +84,6 @@ export default function App() {
                 key={game.id}
                 game={game}
                 index={index}
-                featured
                 onSelect={setSelected}
               />
             ))}
@@ -99,7 +94,7 @@ export default function App() {
           id="jogados"
           index="04"
           kicker="Arquivo"
-          title="Já joguei"
+          title="Jogados"
           count={filteredPlayed.length}
         >
           <label className="mb-8 block max-w-md">
@@ -109,7 +104,7 @@ export default function App() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar por título ou gênero…"
-              className="w-full border border-ember/30 bg-ink/70 px-4 py-3 text-sm text-bone placeholder:text-mist outline-none transition focus:border-gold/60 focus:shadow-[0_0_24px_-6px_rgb(62_240_192/0.6)]"
+              className="w-full border border-ember/30 bg-ink px-4 py-3 text-sm text-bone placeholder:text-mist outline-none focus:border-gold/60"
             />
           </label>
 

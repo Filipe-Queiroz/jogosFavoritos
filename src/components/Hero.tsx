@@ -1,57 +1,56 @@
-import { favorites, online, played, playing } from "../data/games";
-import { ShurikenIcon } from "./Icons";
-import { StageBackdrop } from "./StageBackdrop";
+import { favorites, games, online, played, playing } from "../data/games";
 
 const stats = [
-  { label: "Jogando", value: String(playing.length) },
-  { label: "Já joguei", value: String(played.length) },
-  { label: "Online", value: String(online.length) },
-  { label: "Sagrados", value: String(favorites.length) },
+  { label: "Online", value: online.length },
+  { label: "Jogando", value: playing.length },
+  { label: "Já joguei", value: played.length },
+  { label: "Favoritos", value: favorites.length },
 ] as const;
 
 export function Hero() {
   return (
     <section
       id="topo"
-      className="relative overflow-hidden px-5 pt-16 pb-28 md:px-8 md:pt-24 md:pb-36"
+      className="relative z-10 min-h-[92svh] overflow-hidden px-5 pt-28 pb-16 md:px-8 md:pt-32 md:pb-20"
     >
       <img
-        src="/stage1.png"
+        src="/akira-banner.png"
         alt=""
-        className="pixelated absolute inset-0 h-full w-full scale-[1.04] object-cover object-[center_20%]"
+        className="animate-kenburns absolute inset-0 h-full w-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-linear-to-r from-void via-void/88 to-void/25" />
-      <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-void to-transparent" />
-      <StageBackdrop />
+      <div className="absolute inset-0 bg-linear-to-b from-void/40 via-transparent to-void" />
+      <div className="absolute inset-0 bg-linear-to-r from-void/78 via-void/25 to-void/55" />
 
-      <div className="relative mx-auto max-w-6xl">
+      <p className="writing-vertical font-brush absolute top-28 right-4 hidden text-2xl tracking-[0.4em] text-ember md:right-10 md:block md:text-3xl">
+        ゲーム記録
+      </p>
+
+      <div className="relative mx-auto flex min-h-[64svh] max-w-6xl flex-col justify-end">
         <p
-          className="animate-rise font-pixel text-[8px] leading-relaxed text-ember uppercase md:text-[10px]"
+          className="animate-rise font-pixel text-[8px] leading-relaxed text-gold uppercase md:text-[10px]"
           style={{ animationDelay: "80ms" }}
         >
-          Shinobi III · Stage 1
+          {games.length} registros
         </p>
 
-        <div className="mt-5 flex items-end gap-4">
-          <ShurikenIcon className="animate-flicker mb-2 hidden h-12 w-12 text-gold sm:block" />
-          <h1
-            className="animate-rise font-display text-6xl leading-none font-bold tracking-[0.16em] text-bone sm:text-7xl md:text-8xl"
-            style={{ animationDelay: "160ms" }}
-          >
-            CINZAS
-          </h1>
-        </div>
+        <h1
+          className="animate-rise mt-5 font-display text-5xl leading-[0.95] font-bold tracking-[0.14em] text-bone sm:text-7xl md:text-8xl"
+          style={{ animationDelay: "160ms" }}
+        >
+          <span className="glitch block" data-text="MEMORIAL">
+            MEMORIAL
+          </span>
+          <span className="mt-1 block text-gold">DE JOGOS</span>
+        </h1>
 
         <p
-          className="animate-rise mt-6 max-w-xl text-base leading-relaxed text-ash md:text-lg"
+          className="animate-rise font-brush mt-4 text-3xl text-ember md:text-4xl"
           style={{ animationDelay: "240ms" }}
         >
-          Floresta densa, tronco, capim e o céu ciano no vão das folhas. O
-          arquivo pessoal no clima da primeira fase — ninja, machado, souls e o
-          lobby que não desliga.
+          記録
         </p>
 
-        <div className="rule my-10 max-w-xl" />
+        <div className="rule my-8 max-w-xl" />
 
         <dl className="grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
           {stats.map((stat, index) => (
@@ -61,7 +60,11 @@ export function Hero() {
               style={{ animationDelay: `${320 + index * 70}ms` }}
             >
               <dt className="font-pixel text-[7px] text-mist uppercase">{stat.label}</dt>
-              <dd className="mt-1 font-display text-3xl font-semibold text-gold">
+              <dd
+                className={`mt-1 font-display text-3xl font-semibold ${
+                  stat.label === "Online" ? "text-ember" : "text-gold"
+                }`}
+              >
                 {stat.value}
               </dd>
             </div>

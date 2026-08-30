@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { gameById, top10 } from "../data/games";
 import type { Game } from "../types";
 import { CoverImage } from "./CoverImage";
@@ -19,17 +20,12 @@ export function Top10({ onSelect }: Top10Props) {
   if (!first) return null;
 
   return (
-    <Section
-      id="top10"
-      kicker="Boss rush"
-      title="Top 10"
-      description="Dez que não saem da memória. Witcher no trono, Souls no altar, Shinobi III e Golden Axe III no clã — e ESWAT no canto mais cruel."
-    >
-      <div className="grid gap-6 lg:grid-cols-[1.15fr_1fr]">
+    <Section id="top10" index="05" kicker="Ranking" title="Top 10" count={ranked.length}>
+      <div className="stagger grid gap-6 lg:grid-cols-[1.15fr_1fr]">
         <button
           type="button"
           onClick={() => onSelect(first.game)}
-          className="group relative overflow-hidden border border-gold/40 bg-bark text-left shadow-[0_0_60px_-18px_rgb(112_192_72/0.55)]"
+          className="group relative overflow-hidden border border-ember/40 bg-bark text-left shadow-[0_0_60px_-16px_rgb(255_45_138/0.45)]"
         >
           <CoverImage
             steamId={first.game.steamId}
@@ -49,13 +45,13 @@ export function Top10({ onSelect }: Top10Props) {
           </div>
         </button>
 
-        <ol className="flex flex-col gap-3">
-          {rest.map((item) => (
-            <li key={item.game.id}>
+        <ol className="stagger flex flex-col gap-3">
+          {rest.map((item, index) => (
+            <li key={item.game.id} style={{ "--i": index } as CSSProperties}>
               <button
                 type="button"
                 onClick={() => onSelect(item.game)}
-                className="flex w-full items-center gap-4 border border-white/10 bg-bark/60 p-2.5 text-left transition hover:border-gold/40"
+                className="flex w-full items-center gap-4 border border-white/10 bg-bark/60 p-2.5 text-left transition hover:translate-x-1 hover:border-gold/50 hover:bg-bark hover:shadow-[0_0_24px_-10px_rgb(62_240_192/0.8)]"
               >
                 <span className="w-10 shrink-0 text-center font-display text-lg font-semibold text-gold/80">
                   {String(item.rank).padStart(2, "0")}

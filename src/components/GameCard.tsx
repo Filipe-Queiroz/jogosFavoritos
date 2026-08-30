@@ -1,3 +1,4 @@
+import type { CSSProperties, PointerEvent } from "react";
 import type { Game } from "../types";
 import { CoverImage } from "./CoverImage";
 
@@ -5,6 +6,7 @@ type GameCardProps = {
   game: Game;
   onSelect: (game: Game) => void;
   featured?: boolean;
+  index?: number;
 };
 
 function stars(rating: number) {
@@ -12,15 +14,35 @@ function stars(rating: number) {
   return "◆".repeat(filled) + "◇".repeat(5 - filled);
 }
 
-export function GameCard({ game, onSelect, featured = false }: GameCardProps) {
+export function GameCard({ game, onSelect, featured = false, index = 0 }: GameCardProps) {
+  const handleMove = (event: PointerEvent<HTMLButtonElement>) => {
+    const node = event.currentTarget;
+    const rect = node.getBoundingClientRect();
+    const px = (event.clientX - rect.left) / rect.width;
+    const py = (event.clientY - rect.top) / rect.height;
+    node.style.setProperty("--rx", `${(0.5 - py) * 9}deg`);
+    node.style.setProperty("--ry", `${(px - 0.5) * 11}deg`);
+    node.style.setProperty("--gx", `${px * 100}%`);
+    node.style.setProperty("--gy", `${py * 100}%`);
+  };
+
+  const handleLeave = (event: PointerEvent<HTMLButtonElement>) => {
+    const node = event.currentTarget;
+    node.style.setProperty("--rx", "0deg");
+    node.style.setProperty("--ry", "0deg");
+  };
+
   return (
     <button
       type="button"
       onClick={() => onSelect(game)}
-      className={`group relative flex flex-col overflow-hidden border text-left transition duration-300 ${
+      onPointerMove={handleMove}
+      onPointerLeave={handleLeave}
+      style={{ "--i": index } as CSSProperties}
+      className={`tilt-card group relative flex flex-col overflow-hidden border text-left ${
         featured
-          ? "border-gold/50 bg-bark shadow-[0_0_40px_-16px_rgb(112_192_72/0.75)]"
-          : "border-white/10 bg-bark/70 hover:border-gold/45"
+          ? "border-gold/50 bg-bark/80 shadow-[0_0_40px_-14px_rgb(62_240_192/0.7)]"
+          : "border-white/10 bg-bark/70 hover:border-ember/50"
       }`}
     >
       <div className="relative aspect-2/3 overflow-hidden">
@@ -48,7 +70,7 @@ export function GameCard({ game, onSelect, featured = false }: GameCardProps) {
 
         {game.favorite ? (
           <span className="absolute top-3 right-3 border border-gold/40 bg-ink/80 px-2.5 py-1 font-pixel text-[7px] text-gold uppercase">
-            Sagrado
+            Favorito
           </span>
         ) : null}
 

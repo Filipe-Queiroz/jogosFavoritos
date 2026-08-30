@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
+import { CyberBackground } from "./components/CyberBackground";
 import { Footer } from "./components/Footer";
 import { GameCard } from "./components/GameCard";
 import { GameModal } from "./components/GameModal";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { NeonCursor } from "./components/NeonCursor";
 import { Section } from "./components/Section";
 import { Top10 } from "./components/Top10";
 import { favorites, online, played, playing } from "./data/games";
@@ -24,22 +26,48 @@ export default function App() {
   }, [query]);
 
   return (
-    <div className="bg-atmosphere bg-scanlines min-h-svh">
+    <div className="bg-scanlines min-h-svh">
+      <CyberBackground />
+      <NeonCursor />
       <Header />
       <main>
         <Hero />
 
         <Section
-          id="favoritos"
-          kicker="O clã"
-          title="Jogos sagrados"
-          description="Shinobi III e Golden Axe III no núcleo Sega, Witcher 3 no continente, e a trilogia Dark Souls — Lordran, Drangleic, Lothric."
+          id="online"
+          index="01"
+          kicker="Netplay"
+          title="Jogos online"
+          count={online.length}
         >
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6 lg:gap-4">
-            {favorites.map((game) => (
+          <div className="neon-frame bg-bark/40 p-4 md:p-6">
+            <div className="stagger grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+              {online.map((game, index) => (
+                <GameCard
+                  key={game.id}
+                  game={game}
+                  index={index}
+                  featured
+                  onSelect={setSelected}
+                />
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        <Section
+          id="jogando"
+          index="02"
+          kicker="Em andamento"
+          title="Jogando agora"
+          count={playing.length}
+        >
+          <div className="stagger grid grid-cols-1 gap-4 sm:grid-cols-3 lg:gap-5">
+            {playing.map((game, index) => (
               <GameCard
                 key={game.id}
                 game={game}
+                index={index}
                 featured
                 onSelect={setSelected}
               />
@@ -48,23 +76,31 @@ export default function App() {
         </Section>
 
         <Section
-          id="jogando"
-          kicker="A sessão"
-          title="Jogando agora"
-          description="Campanhas abertas. Elden Ring e Baldur's Gate 3 ainda sem crédito final."
+          id="favoritos"
+          index="03"
+          kicker="Preferidos"
+          title="Favoritos"
+          count={favorites.length}
         >
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-            {playing.map((game) => (
-              <GameCard key={game.id} game={game} onSelect={setSelected} />
+          <div className="stagger grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6 lg:gap-4">
+            {favorites.map((game, index) => (
+              <GameCard
+                key={game.id}
+                game={game}
+                index={index}
+                featured
+                onSelect={setSelected}
+              />
             ))}
           </div>
         </Section>
 
         <Section
           id="jogados"
-          kicker="O arquivo"
+          index="04"
+          kicker="Arquivo"
           title="Já joguei"
-          description="Do Mega Drive ao PC: ninjas, machados, souls, cartas, crowbar. ESWAT no canto mais difícil da prateleira."
+          count={filteredPlayed.length}
         >
           <label className="mb-8 block max-w-md">
             <span className="sr-only">Buscar no arquivo</span>
@@ -73,32 +109,27 @@ export default function App() {
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar por título ou gênero…"
-              className="w-full border border-gold/25 bg-ink px-4 py-3 text-sm text-bone placeholder:text-mist outline-none focus:border-gold/60"
+              className="w-full border border-ember/30 bg-ink/70 px-4 py-3 text-sm text-bone placeholder:text-mist outline-none transition focus:border-gold/60 focus:shadow-[0_0_24px_-6px_rgb(62_240_192/0.6)]"
             />
           </label>
 
           {filteredPlayed.length === 0 ? (
-            <p className="text-sm text-ash">Nenhum jogo nesse corredor do castelo.</p>
+            <p className="text-sm text-ash">Nenhum registro encontrado.</p>
           ) : (
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-              {filteredPlayed.map((game) => (
-                <GameCard key={game.id} game={game} onSelect={setSelected} />
+            <div
+              key={query}
+              className="stagger grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5"
+            >
+              {filteredPlayed.map((game, index) => (
+                <GameCard
+                  key={game.id}
+                  game={game}
+                  index={Math.min(index, 12)}
+                  onSelect={setSelected}
+                />
               ))}
             </div>
           )}
-        </Section>
-
-        <Section
-          id="online"
-          kicker="Netplay"
-          title="Jogos online"
-          description="Lobby, wipe, ranked e o extract que nunca chega. Do CS ao Rust, do Rift ao Nuketown."
-        >
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-            {online.map((game) => (
-              <GameCard key={game.id} game={game} onSelect={setSelected} />
-            ))}
-          </div>
         </Section>
 
         <Top10 onSelect={setSelected} />

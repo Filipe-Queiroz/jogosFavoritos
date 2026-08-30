@@ -9,9 +9,9 @@ type GameModalProps = {
 };
 
 function statusLabel(game: Game) {
-  if (game.status === "playing") return "Em sessão";
-  if (game.status === "online") return "Netplay";
-  return "Arquivo";
+  if (game.status === "playing") return "Jogando";
+  if (game.status === "online") return "Online";
+  return "Já joguei";
 }
 
 export function GameModal({ game, onClose }: GameModalProps) {
@@ -82,8 +82,8 @@ export function GameModal({ game, onClose }: GameModalProps) {
             ) : null}
             {game.favorite ? (
               <div>
-                <dt className="text-[10px] tracking-[0.18em] text-mist uppercase">Lugar</dt>
-                <dd className="mt-1 text-gold">Sagrado</dd>
+                <dt className="text-[10px] tracking-[0.18em] text-mist uppercase">Lista</dt>
+                <dd className="mt-1 text-gold">Favorito</dd>
               </div>
             ) : null}
           </dl>

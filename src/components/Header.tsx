@@ -17,8 +17,19 @@ export function Header() {
   const active = useActiveSection(ids);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+    if (open) {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }
+
+    const timer = window.setTimeout(() => {
+      document.body.style.overflow = "";
+    }, 280);
+
     return () => {
+      window.clearTimeout(timer);
       document.body.style.overflow = "";
     };
   }, [open]);

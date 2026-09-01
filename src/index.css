@@ -167,24 +167,44 @@ img {
   bottom: 0;
   left: 0;
   z-index: 40;
-  display: none;
   background:
     radial-gradient(80% 40% at 100% 0%, rgb(255 45 138 / 0.18), transparent 50%),
     var(--color-ink);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0s linear 0.28s;
 }
 
 .mobile-menu[data-open="true"] {
-  display: block;
-  animation: menu-in 0.28s ease both;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: none;
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    visibility 0s;
 }
 
-.mobile-menu[data-open="true"]::after {
+.mobile-menu::after {
   content: "";
   position: absolute;
   inset-inline: 0;
   top: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--color-gold), var(--color-ember));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+
+.mobile-menu[data-open="true"]::after {
+  transform: scaleX(1);
 }
 
 .mobile-link {
@@ -194,36 +214,26 @@ img {
   padding: 0.9rem 0;
   color: var(--color-bone);
   border-bottom: 1px solid rgb(255 255 255 / 0.08);
+  opacity: 0;
+  transform: translateX(-14px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    color 0.15s ease;
 }
 
 .mobile-menu[data-open="true"] .mobile-link {
-  animation: menu-item 0.35s ease calc(var(--i, 0) * 50ms) both;
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(var(--i, 0) * 45ms);
+}
+
+.mobile-menu:not([data-open="true"]) .mobile-link {
+  transition-delay: calc((4 - var(--i, 0)) * 30ms);
 }
 
 .mobile-link.is-active {
   color: var(--color-gold);
-}
-
-@keyframes menu-in {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes menu-item {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
 }
 
 @media (pointer: coarse) {
@@ -342,10 +352,14 @@ img {
   .animate-ember,
   .animate-rise,
   .cyber-grid,
-  .burger,
-  .mobile-menu[data-open="true"],
-  .mobile-menu[data-open="true"] .mobile-link {
+  .burger {
     animation: none;
+  }
+
+  .mobile-menu,
+  .mobile-menu::after,
+  .mobile-link {
+    transition: none;
   }
 
   [data-reveal],

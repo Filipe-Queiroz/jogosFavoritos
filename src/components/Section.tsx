@@ -18,15 +18,15 @@ export function Section({ id, index, kicker, title, count, children }: SectionPr
       id={id}
       ref={ref}
       data-reveal={visible ? "in" : "out"}
-      className="relative z-10 scroll-mt-24 px-5 py-16 md:px-8 md:py-24"
+      className="relative z-10 scroll-mt-16 px-5 py-12 md:scroll-mt-24 md:px-8 md:py-24"
     >
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between gap-4">
-          <div>
+          <div className="min-w-0">
             <p className="font-pixel text-[8px] leading-relaxed text-gold uppercase md:text-[9px]">
               {index} / {kicker}
             </p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-wide text-bone md:text-5xl">
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-wide break-words text-bone md:text-5xl">
               {title}
             </h2>
           </div>

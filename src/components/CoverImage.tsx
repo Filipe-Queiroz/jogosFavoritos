@@ -34,7 +34,7 @@ export function CoverImage({
     <img
       src={src}
       alt={`Capa de ${title}`}
-      className={`object-cover ${className ?? ""}`}
+      className={`max-w-full object-cover ${className ?? ""}`}
       loading={priority ? "eager" : "lazy"}
       decoding="async"
       onError={() => setIndex((current) => current + 1)}

@@ -25,7 +25,7 @@ export default function App() {
   }, [query]);
 
   return (
-    <div className="min-h-svh">
+    <div className="min-h-svh overflow-x-hidden">
       <CyberBackground />
       <Header />
       <main>

@@ -21,11 +21,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100svh;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--color-void);
   color: var(--color-bone);
   font-family: var(--font-sans);
@@ -37,9 +40,8 @@ body {
   color: var(--color-bone);
 }
 
-:focus-visible {
-  outline: 2px solid var(--color-gold);
-  outline-offset: 3px;
+img {
+  max-width: 100%;
 }
 
 .cyber-stage {
@@ -79,11 +81,191 @@ body {
 
 .tilt-card {
   transform: perspective(760px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: transform 0.18s ease, border-color 0.2s ease;
+  transition:
+    transform 0.18s ease,
+    border-color 0.2s ease;
 }
 
 .tilt-card:hover {
   border-color: color-mix(in srgb, var(--color-ember) 55%, transparent);
+}
+
+.animate-rise {
+  animation: rise 0.7s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- menu mobile ---------- */
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--color-gold);
+}
+
+.burger span {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease,
+    top 0.3s ease;
+}
+
+.burger span:nth-child(1) {
+  top: 13px;
+}
+
+.burger span:nth-child(2) {
+  top: 19px;
+}
+
+.burger span:nth-child(3) {
+  top: 25px;
+}
+
+.burger[data-open="true"] {
+  color: var(--color-ember);
+}
+
+.burger[data-open="true"] span:nth-child(1) {
+  top: 19px;
+  transform: rotate(45deg);
+}
+
+.burger[data-open="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[data-open="true"] span:nth-child(3) {
+  top: 19px;
+  transform: rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 3.5rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  display: none;
+  background:
+    radial-gradient(80% 40% at 100% 0%, rgb(255 45 138 / 0.18), transparent 50%),
+    var(--color-ink);
+}
+
+.mobile-menu[data-open="true"] {
+  display: block;
+  animation: menu-in 0.28s ease both;
+}
+
+.mobile-menu[data-open="true"]::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-gold), var(--color-ember));
+}
+
+.mobile-link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.9rem 0;
+  color: var(--color-bone);
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.mobile-menu[data-open="true"] .mobile-link {
+  animation: menu-item 0.35s ease calc(var(--i, 0) * 50ms) both;
+}
+
+.mobile-link.is-active {
+  color: var(--color-gold);
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes menu-item {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .tilt-card {
+    transform: none;
+    transition:
+      transform 0.16s ease,
+      border-color 0.16s ease;
+  }
+
+  .tilt-card:active {
+    transform: scale(0.97);
+    border-color: color-mix(in srgb, var(--color-ember) 70%, transparent);
+  }
+
+  .tilt-card:active img {
+    transform: scale(1.06);
+  }
+
+  .cyber-grid {
+    animation-duration: 8s;
+  }
+}
+
+@media (max-width: 1023px) {
+  .burger {
+    animation: burger-idle 2.4s ease-in-out infinite;
+  }
+
+  .burger[data-open="true"] {
+    animation: none;
+  }
+}
+
+@keyframes burger-idle {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgb(62 240 192 / 0.7));
+  }
 }
 
 [data-reveal] {
@@ -103,6 +285,10 @@ body {
 
 [data-reveal="in"] .stagger > * {
   animation: card-in 0.4s ease calc(var(--i, 0) * 30ms) both;
+}
+
+.stagger > * {
+  min-width: 0;
 }
 
 [data-reveal] .sweep {
@@ -154,7 +340,11 @@ body {
   }
 
   .animate-ember,
-  .cyber-grid {
+  .animate-rise,
+  .cyber-grid,
+  .burger,
+  .mobile-menu[data-open="true"],
+  .mobile-menu[data-open="true"] .mobile-link {
     animation: none;
   }
 

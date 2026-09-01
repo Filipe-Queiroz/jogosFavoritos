@@ -38,7 +38,7 @@ export function GameCard({ game, onSelect, index = 0 }: GameCardProps) {
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
       style={{ "--i": index } as CSSProperties}
-      className="tilt-card group relative flex flex-col overflow-hidden border border-white/10 bg-bark/70 text-left hover:border-ember/50"
+      className="tilt-card group relative flex w-full min-w-0 max-w-full flex-col overflow-hidden border border-white/10 bg-bark/70 text-left hover:border-ember/50 active:border-ember/70"
     >
       <div className="relative aspect-2/3 overflow-hidden">
         <CoverImage
@@ -79,10 +79,10 @@ export function GameCard({ game, onSelect, index = 0 }: GameCardProps) {
         ) : null}
 
         <div className="absolute inset-x-0 bottom-0 p-3.5">
-          <p className="font-pixel text-[7px] leading-relaxed text-gold uppercase">
+          <p className="font-pixel text-[7px] leading-relaxed break-all text-gold uppercase">
             {game.genre} · {game.year}
           </p>
-          <h3 className="mt-1 font-display text-base leading-tight font-semibold text-bone md:text-lg">
+          <h3 className="mt-1 font-display text-base leading-tight font-semibold break-words text-bone md:text-lg">
             {game.title}
           </h3>
           <p className="mt-1 text-[11px] tracking-wide text-ash">{stars(game.rating)}</p>
